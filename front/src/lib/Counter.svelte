@@ -1,10 +1,13 @@
 <script>
+  import { API_ROOT } from '../config.js'
   let count = 0
 
   let data = {}
 
   const getData = async () => {
-    const r = await fetch('http://host.docker.internal:5001/')
+    console.log(`${API_ROOT}/api`)
+    console.log(import.meta.env)
+    const r = await fetch(`${API_ROOT}/api`)
     const j = await r.json()
     data = j
   }
