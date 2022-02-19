@@ -20,4 +20,4 @@ COPY --from=front /usr/src/front/dist /usr/src/back/dist
 
 EXPOSE 80
 
-CMD ["gunicorn", "app.py"]
+CMD ["gunicorn", "app:app"]
